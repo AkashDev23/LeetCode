@@ -81,15 +81,14 @@ class Node
 class Solution
 {
     //Function to sort a linked list of 0s, 1s and 2s.
-    //We will take a hashmap and count the frequency of the elements.
-    //we will then arrance 0's, 1's and 2's into a new linkedlist based on the time they are occuring. 
     static Node segregate(Node head)
     {
+        // add your code here
         if(head==null || head.next==null){
             return head;
         }
-        HashMap<Integer, Integer>map=new HashMap<>();
-        Node curr=head;
+        HashMap<Integer, Integer> map=new HashMap<>();
+         Node curr=head;
         while(curr!=null){
             int val=curr.data;
             map.put(val, map.getOrDefault(val, 0)+1);
@@ -113,5 +112,4 @@ class Solution
         return sortedList;
     }
 }
-
 
